@@ -170,6 +170,7 @@ if [[ $LogDumpAuth == "" ]] # Check if log result indicates User has Authenticat
 				if [[ $LogDumpLogin == "" ]]  # Check if log result indicates User has Logged In
 					then
 						AccountUsed=NO
+						/bin/echo 'Account "'$User'" has NOT been used in the last "'$Range'"'
 					else
 						AccountUsed=LOGIN
 				fi
