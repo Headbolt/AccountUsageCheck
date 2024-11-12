@@ -112,7 +112,7 @@ CurrentTimeStamp=$(date +"%s") # Grabbing current time in Epoch Time
 TimeDiff=$(($CurrentTimeStamp - $MarkerStamp)) # Find relative file age
 /bin/echo 'Relative age of Marker file in Epoch time is "'$TimeDiff'"'
 #
-RangeInteger=$(/bin/echo $Range | cut -c -2) # Pull out just the interger from the desired time range
+RangeInteger=$(/bin/echo $Range | rev | cut -c 2- | rev) # Pull out just the interger from the desired time range
 #
 if [[ $(/bin/echo $Range | grep m) != "" ]] # Check if log result indicates User has Authenticated
 	then
